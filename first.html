@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link href="styles/main.css" rel="stylesheet">
+    <script>
+    if (window.module) module = window.module;
+    </script>
+    <style>
+    .modal-header,
+    h4,
+    .close {
+        background-color: #5cb85c;
+        color: white !important;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="main.js">
+    </script>
+    <div id="container" class="container">
+        <img src="setting.svg" alt="no image" width="20px" height="20px" align="right" id="myBtn" onclick="openDialog();">
+        <br>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="email" class="form-control" id="phoneNumber" placeholder="+917250705072">
+            </div>
+            <div class="form-group">
+                <label for="smsMessage">Enter Message</label>
+                <textarea class="form-control" id="smsMessage" rows="4" placeholder="Enter message"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="form-group" align="center">
+                    <input type="button" name="login" id="driver" value="Send Message" class="btn btn-success btn btn-primary btn-block" onclick="sendMessage();">
+                </div>
+            </div>
+        </form>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 style="margin-top: 0"y><span class="glyphicon glyphicon-cog"></span> Setting</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="apikey"><span class="glyphicon glyphicon-user glyphicon-certificate"></span> API KEY</label>
+                                <input type="text" class="form-control" id="apikey" placeholder="Enter API-KEY">
+                            </div>
+                            <div class="form-group">
+                                <label for="senderID"><span class="glyphicon glyphicon-eye-open"></span> SenderID</label>
+                                <input type="text" class="form-control" id="senderID" placeholder="Enter password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" onclick="saveSetting();"><span class="glyphicon glyphicon-saved"></span> save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3" id="logo_div" align="center">
+            <img src="splashlogo.png" alt="mobtexting logo" class="img-responsive" width="200" />
+        </div>
+    </div>
+</body>
+
+</html>
